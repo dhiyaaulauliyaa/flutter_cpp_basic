@@ -1,0 +1,18 @@
+{
+  "editor.tokenColorCustomizations": {
+    "comments": "#a5a5a5",
+    "textMateRules": []
+  },
+  "dart.flutterSdkPath": ".fvm/versions/3.32.5",
+  // Native C++ tooling
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.cStandard": "c17",
+  "files.associations": {
+    "*.mm": "objective-cpp",
+    "*.m": "objective-c",
+    "ios/**/*.h": "objective-cpp"
+  },
+  "cmake.configureOnOpen": false,
+  "cmake.buildDirectory": "${workspaceFolder}/build/native"
+}

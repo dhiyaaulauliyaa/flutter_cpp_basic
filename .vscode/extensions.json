@@ -1,0 +1,43 @@
+{
+    "recommendations": [
+        // Core Flutter & Dart
+        "dart-code.flutter",
+        "dart-code.dart-code",
+        
+        // Enhanced Flutter Development
+        "felixangelov.bloc",
+        "luanpotter.dart-import",
+        "jeroen-meijer.pubspec-assist",
+        "flutterando.flutter-coverage",
+        
+        // Code Quality & Formatting
+        "usernamehw.errorlens",
+        "esbenp.prettier-vscode",
+        "aaron-bond.better-comments",
+        
+        // Visual Enhancements
+        "naumovs.color-highlight",
+        "anseki.vscode-color",
+        
+        // Git & Version Control
+        "eamodio.gitlens",
+        
+        // General Productivity
+        "ms-vscode.vscode-json", // ?
+        "redhat.vscode-yaml",
+        "formulahendry.auto-rename-tag",
+        "christian-kohler.path-intellisense",
+        "eliostruyf.vscode-hide-comments",
+        
+        // Native C++ & FFI
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "ms-vscode.makefile-tools",
+        "vadimcn.vscode-lldb",
+
+        // Kotlin & Swift Native
+        "fwcd.kotlin",
+        "ms-androidtools.vscode-android",
+        "swiftlang.swift-vscode"
+    ]
+}
