@@ -14,7 +14,11 @@
     "css": "css",
     "*.mm": "objective-cpp",
     "*.m": "objective-c",
+    "*.swift": "swift",
     "ios/**/*.h": "objective-cpp",
+    "ios/**/*.swift": "swift",
+    "Podfile": "ruby",
+    "*.podspec": "ruby",
     "algorithm": "cpp",
     "cmath": "cpp",
     "new": "cpp",
@@ -81,8 +85,43 @@
     "valarray": "cpp",
     "variant": "cpp",
     "vector": "cpp",
-    "__verbose_abort": "cpp"
+    "__verbose_abort": "cpp",
+    "iomanip": "cpp",
+    "cfloat": "cpp",
+    "regex": "cpp",
+    "fstream": "cpp",
+    "list": "cpp",
+    "random": "cpp",
+    "set": "cpp",
+    "unordered_set": "cpp",
+    "filesystem": "cpp",
+    "version": "cpp"
   },
   "cmake.configureOnOpen": false,
-  "cmake.buildDirectory": "${workspaceFolder}/build/native"
+  "cmake.buildDirectory": "${workspaceFolder}/build/native",
+  
+  // iOS/Swift Configuration
+  "swift.path": "/usr/bin/swift",
+  "swift.buildPath": "${workspaceFolder}/ios",
+  "swift.xcodeProjectPath": "${workspaceFolder}/ios/Runner.xcodeproj",
+  "swift.packagePath": "${workspaceFolder}/ios",
+  
+  // iOS specific file associations merged into main files.associations above
+  
+  // Search settings to help VS Code find iOS files
+  "search.useIgnoreFiles": false,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/build": true,
+    "**/Pods": true,
+    "**/.symlinks": true,
+    "**/DerivedData": true
+  },
+  
+  // Language server settings
+  "swift.languageServerPath": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
+  
+  // Xcode integration
+  "ios.simulatorLogPath": "${workspaceFolder}/ios"
 }
