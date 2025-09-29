@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_cpp_basic/cpp_counter_plugin.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,9 +32,36 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
+  @override
+  void initState() {
+    super.initState();
+    _updateCounterFromCpp();
+  }
+
+  void _updateCounterFromCpp() async {
+    final value = await CppCounterPlugin.getValue();
+    if (value != null) {
+      setState(() {
+        _counter = value;
+      });
+    }
+  }
+
   void _incrementCounter() {
-    setState(() {
-      _counter++;
+    CppCounterPlugin.increment().then((_) {
+      _updateCounterFromCpp();
+    });
+  }
+
+  void _decrementCounter() {
+    CppCounterPlugin.decrement().then((_) {
+      _updateCounterFromCpp();
+    });
+  }
+
+  void _resetCounter() {
+    CppCounterPlugin.reset().then((_) {
+      _updateCounterFromCpp();
     });
   }
 
@@ -57,10 +85,27 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            onPressed: _resetCounter,
+            tooltip: 'Reset',
+            child: const Icon(Icons.refresh),
+          ),
+          const SizedBox(width: 10),
+          FloatingActionButton(
+            onPressed: _incrementCounter,
+            tooltip: 'Increment',
+            child: const Icon(Icons.add),
+          ),
+          const SizedBox(width: 10),
+          FloatingActionButton(
+            onPressed: _decrementCounter,
+            tooltip: 'Decrement',
+            child: const Icon(Icons.remove),
+          ),
+        ],
       ),
     );
   }
