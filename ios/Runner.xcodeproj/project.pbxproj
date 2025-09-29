@@ -14,6 +14,12 @@
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
+		ABCDC3102B1234567890ABD7 /* cpp/counter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABCDC3012B1234567890ABCE /* cpp/counter.cpp */; };
+		ABCDC3112B1234567890ABD8 /* cpp/data_transformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABCDC3032B1234567890ABD0 /* cpp/data_transformer.cpp */; };
+		ABCDC3122B1234567890ABD9 /* CounterWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = ABCDC3052B1234567890ABD2 /* CounterWrapper.mm */; };
+		ABCDC3132B1234567890ABDA /* DataTransformerWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = ABCDC3072B1234567890ABD4 /* DataTransformerWrapper.mm */; };
+		ABCDC3142B1234567890ABDB /* CounterPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCDC3082B1234567890ABD5 /* CounterPlugin.swift */; };
+		ABCDC3152B1234567890ABDC /* DataTransformerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCDC3092B1234567890ABD6 /* DataTransformerPlugin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,16 @@
 		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABCDC3002B1234567890ABCD /* cpp/counter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cpp/counter.h; sourceTree = "<group>"; };
+		ABCDC3012B1234567890ABCE /* cpp/counter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cpp/counter.cpp; sourceTree = "<group>"; };
+		ABCDC3022B1234567890ABCF /* cpp/data_transformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cpp/data_transformer.h; sourceTree = "<group>"; };
+		ABCDC3032B1234567890ABD0 /* cpp/data_transformer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cpp/data_transformer.cpp; sourceTree = "<group>"; };
+		ABCDC3042B1234567890ABD1 /* CounterWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CounterWrapper.h; sourceTree = "<group>"; };
+		ABCDC3052B1234567890ABD2 /* CounterWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CounterWrapper.mm; sourceTree = "<group>"; };
+		ABCDC3062B1234567890ABD3 /* DataTransformerWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataTransformerWrapper.h; sourceTree = "<group>"; };
+		ABCDC3072B1234567890ABD4 /* DataTransformerWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DataTransformerWrapper.mm; sourceTree = "<group>"; };
+		ABCDC3082B1234567890ABD5 /* CounterPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterPlugin.swift; sourceTree = "<group>"; };
+		ABCDC3092B1234567890ABD6 /* DataTransformerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransformerPlugin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +133,16 @@
 				1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */,
 				74858FAE1ED2DC5600515810 /* AppDelegate.swift */,
 				74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */,
+				ABCDC3002B1234567890ABCD /* cpp/counter.h */,
+				ABCDC3012B1234567890ABCE /* cpp/counter.cpp */,
+				ABCDC3022B1234567890ABCF /* cpp/data_transformer.h */,
+				ABCDC3032B1234567890ABD0 /* cpp/data_transformer.cpp */,
+				ABCDC3042B1234567890ABD1 /* CounterWrapper.h */,
+				ABCDC3052B1234567890ABD2 /* CounterWrapper.mm */,
+				ABCDC3062B1234567890ABD3 /* DataTransformerWrapper.h */,
+				ABCDC3072B1234567890ABD4 /* DataTransformerWrapper.mm */,
+				ABCDC3082B1234567890ABD5 /* CounterPlugin.swift */,
+				ABCDC3092B1234567890ABD6 /* DataTransformerPlugin.swift */,
 			);
 			path = Runner;
 			sourceTree = "<group>";
@@ -270,6 +296,12 @@
 			files = (
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
+				ABCDC3102B1234567890ABD7 /* cpp/counter.cpp in Sources */,
+				ABCDC3112B1234567890ABD8 /* cpp/data_transformer.cpp in Sources */,
+				ABCDC3122B1234567890ABD9 /* CounterWrapper.mm in Sources */,
+				ABCDC3132B1234567890ABDA /* DataTransformerWrapper.mm in Sources */,
+				ABCDC3142B1234567890ABDB /* CounterPlugin.swift in Sources */,
+				ABCDC3152B1234567890ABDC /* DataTransformerPlugin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +359,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -448,6 +481,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -505,6 +539,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
