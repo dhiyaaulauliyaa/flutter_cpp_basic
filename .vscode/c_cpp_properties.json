@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Android",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/Users/ado/Library/Android/sdk/ndk/29.0.14033849/sources/android/native_app_glue",
+                "/Users/ado/Library/Android/sdk/ndk/29.0.14033849/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include",
+                "/Users/ado/Library/Android/sdk/ndk/29.0.14033849/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/21/include"
+            ],
+            "defines": [],
+            "compilerPath": "/Users/ado/Library/Android/sdk/ndk/29.0.14033849/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++",
+            "cStandard": "c23",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
