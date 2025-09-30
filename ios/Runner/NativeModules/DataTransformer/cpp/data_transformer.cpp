@@ -28,7 +28,7 @@ std::string DataTransformer::convertFormat(const std::string& data, const std::s
 
 std::string DataTransformer::extractTextStats(const std::string& text) {
     int wordCount = 0;
-    int charCount = text.length();
+    unsigned long charCount = text.length();
     int sentenceCount = 0;
     bool inWord = false;
     
