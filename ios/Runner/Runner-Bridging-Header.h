@@ -2,3 +2,4 @@
 #import "GeneratedPluginRegistrant.h"
 #import "CounterWrapper.h"
 #import "DataTransformerWrapper.h"
+#import "FileInfoWrapper.h"

@@ -7,14 +7,17 @@ import io.flutter.plugin.common.MethodChannel
 class MainActivity : FlutterActivity() {
     private val COUNTER_CHANNEL = "cpp_counter_plugin"
     private val DATA_TRANSFORMER_CHANNEL = "cpp_data_transformer_plugin"
+    private val FILE_INFO_CHANNEL = "cpp_file_info_plugin"
     private lateinit var counterWrapper: CounterWrapper
     private lateinit var dataTransformerWrapper: DataTransformerWrapper
+    private lateinit var fileInfoWrapper: FileInfoWrapper
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
         
         counterWrapper = CounterWrapper()
         dataTransformerWrapper = DataTransformerWrapper()
+        fileInfoWrapper = FileInfoWrapper()
         
         // Counter method channel
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, COUNTER_CHANNEL).setMethodCallHandler {
@@ -73,6 +76,25 @@ class MainActivity : FlutterActivity() {
                         result.success(converted)
                     } else {
                         result.error("INVALID_ARGUMENT", "All arguments must be non-null", null)
+                    }
+                }
+                else -> {
+                    result.notImplemented()
+                }
+            }
+        }
+      
+        // File info method channel
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, FILE_INFO_CHANNEL).setMethodCallHandler {
+            call, result ->
+            when (call.method) {
+                "analyzeFile" -> {
+                    val path = call.argument<String>("path")
+                    if (path != null) {
+                        val metadata = fileInfoWrapper.analyzeFile(path)
+                        result.success(metadata)
+                    } else {
+                        result.error("INVALID_ARGUMENT", "path cannot be null", null)
                     }
                 }
                 else -> {
