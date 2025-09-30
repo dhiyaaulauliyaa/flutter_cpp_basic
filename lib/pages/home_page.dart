@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cpp_basic/pages/counter_page.dart';
 import 'package:flutter_cpp_basic/pages/data_transformer_page.dart';
+import 'package:flutter_cpp_basic/pages/file_info_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -16,6 +17,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            /* Counter */
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -26,6 +28,8 @@ class HomePage extends StatelessWidget {
               child: const Text('Counter Demo'),
             ),
             const SizedBox(height: 20),
+
+            /* Data Transformer */
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -36,6 +40,18 @@ class HomePage extends StatelessWidget {
                 );
               },
               child: const Text('Data Transformer Demo'),
+            ),
+            const SizedBox(height: 20),
+
+            /* File Info */
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const FileInfoPage()),
+                );
+              },
+              child: const Text('File Info Demo'),
             ),
           ],
         ),
