@@ -6,15 +6,15 @@ project("flutter_cpp_basic")
 add_library(
         counter
         SHARED
-        src/main/cpp/counter.cpp
-        src/main/cpp/counter.h)
+        src/main/cpp/counter/counter.cpp
+        src/main/cpp/counter/counter.h)
 
 # Add our data transformer library
 add_library(
         data_transformer
         SHARED
-        src/main/cpp/data_transformer.cpp
-        src/main/cpp/data_transformer.h)
+        src/main/cpp/data_transformer/data_transformer.cpp
+        src/main/cpp/data_transformer/data_transformer.h)
 
 # Find and link Android libraries
 find_library(log-lib log)
